@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tj6-i1-wKW">
+                                <rect key="frame" x="150" y="111" width="300" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVI-hW-SfT">
+                                <rect key="frame" x="150" y="131" width="300" height="30"/>
+                                <color key="backgroundColor" white="0.89715254934210531" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7F1-ry-QyY"/>
+                                </constraints>
+                                <state key="normal" title="Fire!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8ZB-kb-f9i"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qhH-vj-003">
+                                <rect key="frame" x="150" y="57" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="ca7-Fq-WVq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="3hx-e2-awZ"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="qhH-vj-003" secondAttribute="trailing" priority="999" constant="20" id="3Vy-F7-07I"/>
+                            <constraint firstItem="qhH-vj-003" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="37" id="6D9-ab-JKf"/>
+                            <constraint firstItem="qhH-vj-003" firstAttribute="width" secondItem="tj6-i1-wKW" secondAttribute="width" id="7qh-iW-XSv"/>
+                            <constraint firstItem="tj6-i1-wKW" firstAttribute="top" secondItem="qhH-vj-003" secondAttribute="bottom" constant="24" id="9U2-9r-fWA"/>
+                            <constraint firstAttribute="centerX" secondItem="qhH-vj-003" secondAttribute="centerX" id="Do8-mG-Z8G"/>
+                            <constraint firstItem="qhH-vj-003" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="37" id="EXZ-XD-nZd"/>
+                            <constraint firstItem="qhH-vj-003" firstAttribute="width" secondItem="bVI-hW-SfT" secondAttribute="width" id="FdY-ji-ZN8"/>
+                            <constraint firstItem="qhH-vj-003" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" priority="999" constant="20" id="Idw-dP-0vV"/>
+                            <constraint firstItem="bVI-hW-SfT" firstAttribute="leading" secondItem="qhH-vj-003" secondAttribute="leading" id="Jjt-pV-Gn0"/>
+                            <constraint firstItem="bVI-hW-SfT" firstAttribute="top" secondItem="tj6-i1-wKW" secondAttribute="bottom" priority="999" constant="20" id="XiW-0q-qwc"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bVI-hW-SfT" secondAttribute="bottom" constant="1" id="nUW-OX-Ihs"/>
+                            <constraint firstItem="qhH-vj-003" firstAttribute="leading" secondItem="tj6-i1-wKW" secondAttribute="leading" id="wHo-iJ-Ta3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="input" destination="qhH-vj-003" id="k9U-fu-bie"/>
+                        <outlet property="output" destination="tj6-i1-wKW" id="25M-wQ-3Wp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="529" y="441"/>
+        </scene>
+    </scenes>
+</document>
